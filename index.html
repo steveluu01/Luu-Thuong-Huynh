@@ -4,130 +4,120 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lưu Thượng Huynh - BĐS Cao Cấp</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>Lưu Thượng Huynh - Tư vấn BĐS</title>
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f8f9fa;
-      color: #212529;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
     }
     header {
-      background: #0066cc;
+      background-color: #004aad;
       color: white;
-      padding: 20px;
+      padding: 1rem;
       text-align: center;
     }
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 20px;
+    header img {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+    }
+    main {
+      padding: 1rem;
+      max-width: 900px;
+      margin: auto;
     }
     h2 {
-      margin-top: 40px;
-      color: #0066cc;
+      color: #004aad;
+      margin-top: 2rem;
     }
-    .contact, .projects {
-      margin-top: 20px;
-    }
-    .contact a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .card {
+    .info, .project {
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.2s ease-in-out;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
     }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card img {
+    .project img {
       width: 100%;
-      height: 160px;
-      object-fit: cover;
+      border-radius: 10px;
+      margin-top: 1rem;
     }
-    .card-body {
-      padding: 15px;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
     }
-    .card-title {
-      font-size: 1.1em;
-      font-weight: 600;
+    th, td {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      text-align: left;
     }
-    .card-price {
-      color: #28a745;
-      margin-top: 8px;
-      font-weight: bold;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #777;
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      th {
+        background: #f1f1f1;
+      }
+      td {
+        border: none;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+        padding-left: 50%;
+      }
+      td:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 45%;
+        padding-left: 0.5rem;
+        font-weight: bold;
+        white-space: nowrap;
+      }
+      td:nth-of-type(1):before { content: "Loại căn hộ"; }
+      td:nth-of-type(2):before { content: "Giá bán (dự kiến)"; }
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="Huynh.jpg" alt="Lưu Thượng Huynh">
     <h1>Lưu Thượng Huynh</h1>
-    <p>Chuyên tư vấn & phân phối BĐS cao cấp</p>
+    <p>Chuyên viên tư vấn BĐS cao cấp</p>
   </header>
-
-  <div class="container">
-    <div class="contact">
+  <main>
+    <section class="info">
       <h2>Thông tin liên hệ</h2>
-      <p><strong>SĐT:</strong> <a href="tel:0378667037">0378.667.037</a> (Zalo/Viber/WhatsApp)</p>
-      <p><strong>Email:</strong> <a href="mailto:steveluu01@gmail.com">steveluu01@gmail.com</a></p>
-      <p><strong>Facebook:</strong> <a href="https://www.facebook.com/thuong.huynh.0101" target="_blank">/thuong.huynh.0101</a></p>
-    </div>
-
-    <div class="projects">
-      <h2>Danh sách dự án nổi bật</h2>
-      <div class="grid">
-        <div class="card">
-          <img src="https://via.placeholder.com/400x160?text=Eurowindow+Twin+Parks" alt="Eurowindow Twin Parks">
-          <div class="card-body">
-            <div class="card-title">Eurowindow Twin Parks - Gia Lâm</div>
-            <div class="card-price">18 – 60 tỷ VND (ưu đãi đến 20%)</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="https://via.placeholder.com/400x160?text=Vinhomes+Wonder+City" alt="Vinhomes Wonder City">
-          <div class="card-body">
-            <div class="card-title">Vinhomes Wonder City – Đan Phượng</div>
-            <div class="card-price">25 – 60 tỷ VND</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="https://via.placeholder.com/400x160?text=Masteri+Lakeside" alt="Masteri Lakeside">
-          <div class="card-body">
-            <div class="card-title">Masteri Lakeside</div>
-            <div class="card-price">60 – 80 triệu/m²</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="https://via.placeholder.com/400x160?text=Masteri+Trinity+Square" alt="Masteri Trinity Square">
-          <div class="card-body">
-            <div class="card-title">Masteri Trinity Square</div>
-            <div class="card-price">Từ 58 triệu/m²</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    © 2025 Lưu Thượng Huynh. All rights reserved.
-  </footer>
+      <p><strong>Điện thoại:</strong> 0378.667.037 (Zalo/Viber/WhatsApp)</p>
+      <p><strong>Email:</strong> steveluu01@gmail.com</p>
+      <p><strong>Facebook:</strong> /thuong.huynh.0101</p>
+    </section>
+    <section class="project">
+      <h2>Dự án Sonasea Sparkling Vân Đồn</h2>
+      <p><strong>Chủ đầu tư:</strong> CEO Group (niêm yết, vốn chủ sở hữu >6.300 tỷ)</p>
+      <p><strong>Vị trí:</strong> View biển, phong cách Santorini, "tọa sơn hướng thủy"</p>
+      <img src="cho-dem.jpg" alt="Chợ đêm Vân Đồn">
+      <img src="canho-bien.jpg" alt="Căn hộ view biển">
+      <img src="canho-nui.jpg" alt="Căn hộ view núi">
+      <img src="ban-do-du-an.jpg" alt="Tổng quan dự án">
+      <table>
+        <thead>
+          <tr><th>Loại căn hộ</th><th>Giá bán (dự kiến)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Studio (view núi)</td><td>1.56 – 2 tỷ</td></tr>
+          <tr><td>Studio (view biển)</td><td>2.1 – 2.6 tỷ</td></tr>
+          <tr><td>1PN+1</td><td>2.95 – 3.5 tỷ</td></tr>
+          <tr><td>2PN</td><td>3.8 – 4.5 tỷ</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
 </body>
 </html>
